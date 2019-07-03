@@ -1,0 +1,236 @@
+//colors
+$color_thatch_green_approx: #424413;
+$color_lochinvar_approx: #309a86;
+$color_forest_green_approx: #08a033;
+$color_mine_shaft_approx: #333;
+$white: white;
+$color_mexican_red_approx: #a51b35;
+$color_la_rioja_approx: #afb608;
+
+//fonts
+$font_0: Helvetica;
+$font_1: sans-serif;
+
+body {
+    font: 100% $font_0, $font_1;
+    color: $color_mine_shaft_approx;
+}
+
+.menu__boxes--text {
+    padding: 40px;
+    color: $white;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: left;
+}
+
+.banner {
+    background: $color_mexican_red_approx;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 267px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background: $color_la_rioja_approx;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 369px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer__about {
+    background: $color_forest_green_approx;
+    height: 369px;
+    width: auto;
+    display: block;
+    margin: 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__about--center {
+    text-align: center;
+}
+
+.footer__empty {
+    background: $white;
+    height: 362px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    background: $color_thatch_green_approx;
+    width: 1036px;
+    height: 126px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.header__center {
+    text-align: center;
+}
+
+.content {
+    display: inline-block;
+    justify-content: center;
+    margin: 20px;
+    max-width: 1400px;
+}
+
+.content__area {
+    display: block;
+    background: $color_forest_green_approx;
+    height: 850px;
+    width: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer__about {
+    background: $color_forest_green_approx;
+    height: 369px;
+    width: auto;
+    display: block;
+    margin: 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__about--center {
+    text-align: center;
+}
+
+.footer__empty {
+    background: white;
+    height: 362px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header__imgBig {
+    position: relative;
+
+    img {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.content {
+    display: flex;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.content__area {
+    background: $color_forest_green_approx;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.content__menu {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+
+.menu__boxes {
+    background-color: $color_lochinvar_approx;
+    width: auto;
+    height: 206px;
+    margin: 20px;
+}
+
+@media all and (min-width: 500px) {
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .content__area {
+        height: 300px;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .content__area {
+        height: 500px;
+    }
+
+    .content__menu {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+
+    .menu__boxes {
+        width: 100%;
+    }
+
+    .menu__boxes.firstbox {
+        order: 1;
+        flex: 1 0 0;
+        margin: 20px 0px 0 0;
+    }
+
+    .menu__boxes.secondbox {
+        order: 2;
+        flex: 1 0 0;
+        margin: 40px 0 40px 0px;
+    }
+
+    .menu__boxes.thirdbox {
+        order: 3;
+        margin: 0;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .content {
+        display: flex;
+        flex-direction: row;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .content__area {
+        height: 850px;
+        margin-bottom: 0;
+    }
+
+    .content__menu {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin: 0 10px 0 0;
+    }
+}
