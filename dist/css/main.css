@@ -2,11 +2,9 @@ body {
   font: 100% Helvetica, sans-serif;
   color: #333; }
 
-.menu__boxes--text {
+article {
   padding: 50px;
   color: #FFFFFF;
-  font-weight: 100;
-  font-size: 14px;
   text-align: left; }
 
 .banner {
