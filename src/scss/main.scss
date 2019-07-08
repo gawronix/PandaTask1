@@ -3,7 +3,7 @@ $color_thatch_green_approx: #424413;
 $color_lochinvar_approx: #18A1AB;
 $color_forest_green_approx: #08a033;
 $color_mine_shaft_approx: #333;
-$white: white;
+$white: #FFFFFF;
 $color_mexican_red_approx: #a51b35;
 $color_la_rioja_approx: #afb608;
 
@@ -17,7 +17,7 @@ body {
 }
 
 .menu__boxes--text {
-    padding: 80px;
+    padding: 50px;
     color: $white;
     font-weight: 100;
     font-size: 14px;

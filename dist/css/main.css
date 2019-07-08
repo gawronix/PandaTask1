@@ -3,8 +3,8 @@ body {
   color: #333; }
 
 .menu__boxes--text {
-  padding: 80px;
-  color: white;
+  padding: 50px;
+  color: #FFFFFF;
   font-weight: 100;
   font-size: 14px;
   text-align: left; }
@@ -39,7 +39,7 @@ body {
   text-align: center; }
 
 .footer__empty {
-  background: white;
+  background: #FFFFFF;
   height: 362px;
   width: 100%;
   display: flex;
