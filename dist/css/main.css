@@ -91,7 +91,7 @@ body {
   height: 206px;
   margin: 20px; }
 
-@media all and (min-width: 500px) {
+@media all and (max-width: 550px) {
   .header {
     background: #424413;
     width: auto;
@@ -106,7 +106,7 @@ body {
   .content__area {
     height: 300px; } }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 551px) {
   .header {
     background: #424413;
     width: auto;

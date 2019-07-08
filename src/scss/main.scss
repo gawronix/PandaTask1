@@ -121,7 +121,7 @@ body {
     margin: 20px;
 }
 
-@media all and (min-width: 500px) {
+@media all and (max-width: 550px) {
     .header {
         background: $color_thatch_green_approx;
         width: auto;
@@ -142,7 +142,7 @@ body {
     }
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 551px) {
     .header {
         background: $color_thatch_green_approx;
         width: auto;
