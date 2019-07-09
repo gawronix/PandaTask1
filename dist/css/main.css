@@ -36,7 +36,13 @@ article {
   .header--center {
     text-align: center; }
   .header__imgBig {
-    position: relative; }
+    max-width: 1400px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; }
+    @media all and (max-width: 1400px) {
+      .header__imgBig {
+        display: contents; } }
     .header__imgBig img {
       width: 100%;
       height: auto; }
@@ -76,24 +82,25 @@ article {
     width: 100%;
     height: 850px;
     display: block;
-    margin-top: 20px; }
+    margin-top: 20px;
+    margin-right: 79px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
     @media all and (max-width: 501px) {
       .content__area {
         height: 300px;
         margin-top: 0; } }
-    @media all and (min-width: 501px) {
+    @media (max-width: 1400px) and (min-width: 501px) {
       .content__area {
-        height: 500px; } }
-    @media all and (min-width: 1400px) {
-      .content__area {
-        height: 850px;
-        margin-bottom: 80px;
-        margin-right: 90px; } }
+        height: 500px;
+        margin-left: 20px;
+        margin-right: 10px;
+        width: auto; } }
   .content__menu {
     display: flex;
     flex-flow: column;
     text-align: center;
-    margin: 20px 40px 0px 20px;
+    margin: 20px 40px 0px 40px;
     width: 800px; }
     @media all and (max-width: 501px) {
       .content__menu {
