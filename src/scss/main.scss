@@ -14,14 +14,57 @@ $font_1: sans-serif;
 body {
     font: 100% $font_0, $font_1;
     color: $color_mine_shaft_approx;
+    background: url(layout/grass.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 article {
     padding: 50px;
     color: #FFFFFF;
     text-align: left;
+
+    @media all and (max-width:501px) {
+        padding: 30px;
+    }
 }
 
+.header {
+    background: $color_thatch_green_approx;
+    width: 1036px;
+    height: 126px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    @media all and (max-width: 501px) {
+        width: auto;
+        height: 126px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    @media all and (max-width: 1400px) {
+        width: auto;
+        display: block;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &__imgBig {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
 .banner {
     background: $color_mexican_red_approx;
@@ -34,6 +77,126 @@ article {
     margin-bottom: 20px;
 }
 
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1400px;
+
+    @media (max-width: 1400px) and (min-width: 501px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media all and (max-width: 501px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__area {
+        background: $color_forest_green_approx;
+        width: 100%;
+        height: 850px;
+        display: block;
+        margin-top: 20px;
+
+        @media all and (max-width: 501px) {
+            height: 300px;
+            margin-top: 0;
+        }
+
+        @media all and (min-width: 501px) {
+            height: 500px;
+        }
+
+        @media all and (min-width: 1400px) {
+            height: 850px;
+            margin-bottom: 80px;
+            margin-right: 90px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin: 20px 40px 0px 20px;
+        width: 800px;
+
+        @media all and (max-width:501px) {
+            margin: 20px 0px 0px 0px;
+            width: auto;
+        }
+
+        @media (max-width: 1400px) and(min-width: 501px) {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: auto;
+        }
+
+        &__boxes {
+            background-color: $color_lochinvar_approx;
+            width: 100%;
+            height: 206px;
+            margin-bottom: 25px;
+
+            @media all and (max-width: 501px) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 1400px) and (min-width: 501px) {
+                &.firstbox {
+                    order: 1;
+                    flex: 1 0 0;
+                    margin: 0 10px 0 10px;
+                }
+
+                &.secondbox {
+                    order: 2;
+                    flex: 1 0 0;
+                    margin: 0 0 20px 10px;
+                }
+
+                &.thirdbox {
+                    order: 3;
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                }
+            }
+
+            @media all and (min-width: 1401px) {
+                .firstbox {
+                    order: 1;
+                    flex: 1 0 0;
+                    margin: 20px 0 0;
+                }
+
+                .secondbox {
+                    order: 2;
+                    flex: 1 0 0;
+                    margin: 20px 0 20px 0;
+                }
+
+                .thirdbox {
+                    order: 3;
+                    flex: 1 0 0;
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+    }
+}
+
 .footer {
     background: $color_la_rioja_approx;
     position: relative;
@@ -42,224 +205,34 @@ article {
     height: 369px;
     max-width: 1400px;
     margin: 0 auto;
-}
 
-.footer__about {
-    background: $color_forest_green_approx;
-    height: 369px;
-    width: auto;
-    display: block;
-    margin: 20px;
-}
-
-.footer__about--center {
-    text-align: center;
-}
-
-.footer__empty {
-    background: $white;
-    height: 362px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content {
-    display: inline-block;
-    justify-content: center;
-    margin: 20px;
-    max-width: 1400px;
-}
-
-.content__area {
-    display: block;
-    background: $color_forest_green_approx;
-    height: 850px;
-    width: auto;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.header__imgBig {
-    position: relative;
-
-    img {
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-.content {
-    display: flex;
-    margin: 10px auto;
-    width: 100%;
-    max-width: 1400px;
-}
-
-.content__area {
-    background: $color_forest_green_approx;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-
-.content__menu {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: auto;
-}
-
-.menu__boxes {
-    background-color: $color_lochinvar_approx;
-    width: auto;
-    height: 206px;
-    margin: 20px;
-}
-
-@media all and (max-width: 550px) {
-    .header {
-        background: $color_thatch_green_approx;
-        width: auto;
-        height: 126px;
-        margin-bottom: 20px;
-        display: block;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 10px auto;
-        width: 100%;
-    }
-
-    .content__area {
-        height: 300px;
-    }
-}
-
-@media all and (min-width: 551px) {
-    .header {
-        background: $color_thatch_green_approx;
-        width: auto;
-        height: 126px;
-        display: block;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .header__center {
-        text-align: center;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 10px auto;
-        width: 100%;
-    }
-
-    .content__area {
-        height: 500px;
-    }
-
-    .content__menu {
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-    }
-
-    .menu__boxes {
-        width: 100%;
-    }
-
-    .menu__boxes.firstbox {
-        order: 1;
-        flex: 1 0 0;
-        margin: 0 10px 0 10px;
-    }
-
-    .menu__boxes.secondbox {
-        order: 2;
-        flex: 1 0 0;
-        margin: 0 0 20px 10px;
-    }
-
-    .menu__boxes.thirdbox {
-        order: 3;
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    .footer__about {
+    &__about {
         background: $color_forest_green_approx;
         height: 369px;
         width: auto;
         display: block;
         margin: 20px;
+
+        @media all and (min-width: 1400px) {
+            height: 369px;
+            width: 1004px;
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--center {
+            text-align: center;
+        }
     }
 
-}
-
-@media all and (min-width: 1400px) {
-    .header {
-        background: $color_thatch_green_approx;
-        width: 1036px;
-        height: 126px;
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: row;
-        margin: 10px auto;
+    &__empty {
+        background: $white;
+        height: 362px;
         width: 100%;
-    }
-
-    .content__area {
-        height: 850px;
-        margin-bottom: 0;
-        margin-right: 150px;
-    }
-
-    .content__menu {
         display: flex;
-        flex-flow: column;
-        text-align: center;
-        margin: 0 20px 0 150px;
+        align-items: center;
+        justify-content: center;
     }
-
-    .menu__boxes.firstbox {
-        order: 1;
-        flex: 1 0 0;
-        margin: 20px 0 0;
-    }
-
-    .menu__boxes.secondbox {
-        order: 2;
-        flex: 1 0 0;
-        margin: 20px 0 20px 0;
-    }
-
-    .menu__boxes.thirdbox {
-        order: 3;
-        flex: 1 0 0;
-        margin: 0 0 0 0;
-    }
-
-    .footer__about {
-        background: $color_forest_green_approx;
-        height: 369px;
-        width: 1004px;
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
 }
